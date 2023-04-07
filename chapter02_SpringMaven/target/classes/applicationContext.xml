@@ -16,4 +16,10 @@
 		
 	<context:component-scan base-package="spring.conf"/>
 	<!-- annotation 쓰는 것을 알려줘야 한다. -->
+	
+	<!-- sample04 -->
+		<context:component-scan base-package="sample04"/>
+		
+		
+	
 </beans>

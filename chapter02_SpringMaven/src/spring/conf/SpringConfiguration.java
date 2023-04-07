@@ -1,11 +1,15 @@
 package spring.conf;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import sample01.MessageBeanImpl;
 import sample02.CalcAdd;
 import sample02.CalcMul;
+import sample04.SungJukDTO2;
 
 //빈 생성하는 환경설정 파일
 
@@ -30,7 +34,11 @@ public class SpringConfiguration {
 		public CalcMul getCalcMul(){
 			return new CalcMul();
 		}
-	
+		//sample04
+		@Bean
+		public List<SungJukDTO2> arrayList() {
+			return new ArrayList<SungJukDTO2>();
+		}
 }
 /*
  @Bean 

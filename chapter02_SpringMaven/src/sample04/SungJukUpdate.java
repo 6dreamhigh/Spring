@@ -3,10 +3,15 @@ package sample04;
 import java.util.List;
 import java.util.Scanner;
 
-import lombok.Setter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
+
+@Component
 public class SungJukUpdate implements SungJuk {
-	@Setter
+	@Autowired
+	@Qualifier("arrayList")//어떤 자식 클래스가 올지 명시해야 함
 	private List<SungJukDTO2> list = null;
 	
 	@Override
